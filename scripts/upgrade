@@ -4,7 +4,7 @@ final_path=/opt/yunohost/lynis
 sudo rm -rf /opt/yunohost/lynis
 sudo mkdir -p $final_path
 
-upstream_tarball=http://cisofy.com/files/lynis-1.6.2.tar.gz
+upstream_tarball=http://cisofy.com/files/lynis-$(cat version).tar.gz
 sudo wget -O ../lynis.tar.gz $upstream_tarball
 sudo tar xzf ../lynis.tar.gz -C .. > /dev/null 2>&1
 sudo mv ../lynis/* $final_path
