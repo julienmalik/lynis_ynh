@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# http://cisofy.com/documentation/lynis/#cronjobs
+
+AUDITOR="automated"
+cd /opt/yunohost/lynis && ./lynis -c --auditor "${AUDITOR}" --cronjob

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+sudo rm -rf /opt/yunohost/lynis
+sudo rm -f /etc/cron.d/lynis-cron

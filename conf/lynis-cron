@@ -1,0 +1,2 @@
+# at 1:42 every day
+42 1 * * * root /opt/yunohost/lynis/lynis-automated

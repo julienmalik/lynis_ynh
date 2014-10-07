@@ -1,0 +1,20 @@
+#!/bin/bash
+
+final_path=/opt/yunohost/lynis
+sudo mkdir -p $final_path
+
+upstream_tarball=http://cisofy.com/files/lynis-1.6.2.tar.gz
+sudo wget -O ../lynis.tar.gz $upstream_tarball
+sudo tar xzf ../lynis.tar.gz -C .. > /dev/null 2>&1
+sudo mv ../lynis/* $final_path
+
+sudo cp ../conf/lynis-automated $final_path/lynis-automated
+
+sudo cp ../conf/lynis-cron /etc/cron.d/lynis-cron
+
+sudo chown -R root:root $final_path
+sudo find $final_path -type d | xargs sudo chmod 750
+sudo find $final_path -type f | xargs sudo chmod 640
+
+sudo chmod +x $final_path/lynis
+sudo chmod +x $final_path/lynis-automated

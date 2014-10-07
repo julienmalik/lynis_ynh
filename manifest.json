@@ -1,0 +1,16 @@
+{
+  "name": "Lynis",
+  "id": "lynis",
+  "description": {
+    "en": "Security auditing tool",
+    "fr": "Outil d'audit de sécurité"
+  },
+  "developer": {
+    "name": "julienmalik",
+    "email": "julien.malik@paraiso.me",
+    "url": "http://cisofy.com/lynis"
+  },
+  "multi_instance": "false",
+  "arguments": {
+  }
+}
